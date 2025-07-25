@@ -1,0 +1,93 @@
+why ?????
+
+flags to implement : 
+
+✓ strlen  -> done
+✓ strchr  -> done
+✓ strrchr  -> done
+✓ memset  -> done
+✓ memcpy  -> done
+✓ strcmp  -> done
+✓ memmove  -> done
+✓ strncmp  -> done
+✓ strcasecmp  -> done
+✓ strstr  -> done
+✓ strpbrk  -> 
+✓ strcspn  -> next
+
+/\_/\
+(o.o)
+ >^<
+
+
+atentioné opti 
+
+.asm compitlation avec nasm
+
+biblihotèque dinamyqie .so
+
+mémoire registre (16 , 8octet )
+
+RAX 8octets:
+ - EAX 4 octets
+ - AX 2 octets
+ - AL 1 octet
+
+RDX 8 octet :
+ - EDX 4 oc
+ - DX 2 oc
+ - DL 1 octet
+
+RSP : tête d'execussion
+
+RCX : conteur (int i )
+
+RSI : (pointeur chaîne source)
+
+RDI : (destination chaîne source)
+
+Apelle de fonction :
+RDI : premier param
+RSI , RDX, ....
+
+RAX = valuer de retour
+(pour valeur de retour = -erno(-4095, -1))
+
+Apelle système : 
+numéro d'appelle système mettre dans RAX pour l'utiliser
+apeller " SYSCALL " 
+
+Section de la mémoire: 
+
+.text  = code 
+.rodata = const (read only)
+.data = read/write
+
+
+Obligatoire :
+Prologue finction :
+Push RBP / Move RBP  / ENTER00
+
+Epilogue 
+Mov RSP, POP RBP  /LEAVE
+
+Instruction :
+
+Commentaire utiliser " ; "
+BITS 64 " header "
+Changer section " SECTION .name "
+Symbol (ligne code alias) " label: "
+Exporte fonction " GLOBAL symbol "
+Importer " EXTERN symbol "
+Accéder a la mémoire [ ] un seul a la fois
+
+MOV = copy
+PUSH = empile une valeur dans la pile
+POP = récuperer la dernière valeur de la pile 
+
+NEG = negative
+INC = example INC RDX // incrémenter rdx
+
+
+CMP = prépare un if 
+
